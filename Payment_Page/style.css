@@ -1,0 +1,627 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row {
+    display: flex;
+}
+
+main {
+    max-width: 80%;
+    margin: 0 auto;
+    height: 126.625rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.left-payment-section {
+    width: 32.438rem;
+    gap: 3.875rem;
+    justify-content: space-between;
+}
+
+.hotel-booking-details {
+    height: 115.375rem;
+    width: 100%;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.top {
+    background-color: #FFFFFF;
+    padding: 1rem;
+    border-radius: 8px;
+    height: 36rem;
+}
+
+.hotel-photos {
+    padding: 0.5rem;
+    gap: 1rem;
+}
+
+.hotel-photos img {
+    height: 120px;
+    width: 140px;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.hotel-info {
+    padding: 1rem;
+    background-color: #FFFFFF;
+    width: 20.6rem;
+    gap: 1.5rem;
+    justify-content: space-between;
+}
+
+.hotel-heading {
+    height: 204px;
+    gap: 1.5rem;
+}
+
+.hotel-name {
+    gap: 1rem;
+}
+
+.hotel-main-text>p {
+    color: #565656;
+    font-size: 0.6rem;
+    font-weight: 400;
+}
+
+.hotel-review>p {
+    font-size: o.7rem;
+    font-weight: 400;
+}
+
+.hotel-review hr {
+    height: 3px;
+    width: 80%;
+    background-color: #07689F;
+}
+
+.hotel-location-info>h5 {
+    font-size: 1rem;
+    font-weight: 600;
+    display: inline-block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.hotel-location-info ul {
+    font-weight: 400;
+    font-size: 0.75rem;
+    color: #565656;
+    margin-left: 1rem;
+}
+
+.hotel-facility {
+    height: 268px;
+    gap: 0.5rem;
+}
+
+
+/* center section  */
+
+.center {
+    height: 37rem;
+    border-radius: 8px;
+    gap: 0.5rem;
+}
+
+.booking-details {
+    width: 100%;
+    background-color: #FFFFFF;
+    padding: 1rem;
+    height: 19.43rem;
+    justify-content: space-evenly;
+}
+
+.check-In-detail {
+    width: 100%;
+    height: 6.125rem;
+    justify-content: space-evenly;
+    gap: 1.5rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+}
+
+.check-In-detail h4 {
+    font-weight: 700;
+}
+
+.check-In-detail div {
+    flex: 1;
+    padding: 0.5rem;
+    gap: 0.6rem;
+    border-left: 3px solid #07689F;
+}
+
+.check-In-detail {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.stay-detail {
+    gap: 1rem;
+    padding: 0.5rem;
+}
+
+.person-count-detail {
+    padding: 0.5rem;
+    height: 7.56rem;
+}
+
+.person-count-detail ul {
+    margin-left: 1.5rem;
+}
+
+.room-details {
+    padding: 1rem;
+    gap: 1rem;
+}
+
+
+.fetaure {
+    width: 100%;
+    gap: 0.5rem;
+}
+
+.fetaure p {
+    padding: 0.5rem;
+    height: 2.5rem;
+    background-color: #E8F5E4;
+    border: 1px solid #4C9839;
+    flex: 1;
+    text-align: center;
+    font-weight: 500;
+    font-size: 1rem;
+    border-radius: 4px;
+    margin-right: 0.2rem;
+}
+
+
+.room-details strong :nth-child(1) {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.room-details strong :nth-child(2) {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+
+/* bottom  */
+
+.bottom {
+    height: 38.375rem;
+    background-color: #FFFFFF;
+    gap: 1.5rem;
+    padding: 1rem;
+}
+
+
+.main-info {
+    height: 3.813rem;
+}
+
+.main-info h1 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price-details {
+    height: 228px;
+    gap: 1rem;
+    padding: 0 0.5rem 0 0.5rem;
+}
+
+.price-summary {
+    height: 14.25rem;
+}
+
+.price-summary h2 {
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.price-sub-cat1,
+.price-sub-cat2 {
+    justify-content: space-between;
+    padding: 8px 0px 8px 0px;
+}
+
+.price-sub-cat1 {
+    font-weight: 700;
+    font-size: 1rem;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+.price-sub-cat2 {
+    font-weight: 400;
+    font-size: 0.875rem;
+    border-bottom: 1px solid #D9D9D9;
+}
+
+
+.total-price {
+    height: 66px;
+    padding: 1rem;
+    justify-content: space-between;
+    border-bottom: 1px solid #565656;
+}
+
+.total-price h3:nth-child(1) {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.total-price h3:nth-child(2) {
+    color: #4C9839;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+
+
+.cancellation-policy {
+    height: 8.68rem;
+    padding: 0.5rem;
+    gap: 0.6rem;
+}
+
+.cancellation-policy h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.cancellation-policy p {
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0 1rem 0 1rem;
+}
+
+.pay-later {
+    padding: 0.5rem;
+    gap: 0.6rem;
+    width: 100%;
+}
+
+.pay-later-radio {
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.pay-later-radio h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.pay-later p {
+    font-size: 0.85rem;
+    font-weight: 400;
+}
+
+
+.payment-methods {
+    height: 118px;
+    padding: 10px;
+    background-color: #FFFFFF;
+    justify-content: space-between;
+}
+
+.payment-methods h1 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.payment-method-selection {
+    justify-content: space-around;
+    width: 100%;
+    gap: 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    height: 3rem;
+}
+
+.payment-method-selection select {
+    width: 94px;
+    height: 44px;
+}
+
+.payment-method-selection div {
+    gap: 10px;
+}
+
+/* ------------------------------------------------------------------------------------------------------ */
+.right-payment-section {
+    width: 40.125rem;
+    gap: 32px;
+}
+
+.user-booking-details {
+    height: 107.375rem;
+    gap: 24px;
+}
+
+.upper {
+    height: 17.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    gap: 0.6rem;
+    background-color: #FFFFFF;
+}
+
+
+.user-booking-profile {
+    justify-content: space-between;
+    padding: 0rem 1rem;
+}
+
+.user-login-detail {
+    gap: 1rem;
+}
+
+.user-booking-profile img {
+    height: 3.75rem;
+    width: 3.75rem;
+    border-radius: 50%;
+    border: 2px solid #A6A6A6;
+}
+
+.user-booking-profile button {
+    width: 17.313rem;
+    padding: 0.5rem 1rem;
+    color: #07689F;
+    border: 1px solid #07689F;
+    font-size: 1rem;
+    font-weight: 500;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+}
+
+.user-booking-profile button :hover {
+    cursor: pointer;
+}
+
+.profile-name p:nth-child(1) {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.input-selection {
+    padding: 1rem;
+    gap: 1rem;
+
+    justify-content: space-between;
+}
+
+.input-selection h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.input-selection p {
+    font-size: 0.7rem;
+    font-weight: 300;
+    align-items: center;
+    color: #565656;
+}
+
+.edit-profile {
+    gap: 4px;
+}
+
+.edit-profile p {
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.edit-profile a {
+    padding: 0.5rem;
+    text-align: end;
+    font-size: 0.9rem;
+    font-weight: 400;
+    color: #07689F;
+    text-decoration: none;
+}
+
+
+.middle {
+    height: 21.313rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    gap: 0.6rem;
+    background-color: #FFFFFF;
+}
+
+.form-data {
+    width: 34.25rem;
+    gap: 1rem;
+}
+
+.form-data h4 {
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.form-data input,
+select {
+    border-radius: 2px;
+    border: 1px solid #A6A6A6;
+    padding: 2px 8px 2px 8px;
+    height: 2.5rem;
+}
+
+.form-data div:nth-child(1) {
+    gap: 1rem;
+}
+
+.form-name-input>input {
+    width: 11rem;
+    margin-right: 6px;
+}
+
+.form-email-phone-input {
+    justify-content: space-around;
+}
+
+.form-data p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.email-input-form input {
+    width: 22.75rem;
+    background: url(./assets/icons/mail.svg) no-repeat scroll 7px 7px;
+    padding-left: 30px;
+}
+
+.phone-input-form input {
+    background: url(./assets/icons/SE.png) no-repeat scroll 7px 7px;
+    padding-left: 30px;
+}
+
+.form-data div:nth-child(4) {
+    justify-content: space-between;
+}
+
+.lower {
+    height: 107.375rem;
+    border-radius: 0.5rem;
+    padding: 1rem 0.5rem 1rem 0.5rem;
+    gap: 3rem;
+    background-color: #FFFFFF;
+}
+
+.bank-card-details {
+    height: 17.188rem;
+}
+
+.extra-stay-detail {
+    height: 45.25rem;
+    gap: 2rem;
+}
+
+.extra-stay-detail-upper {
+    gap: 1rem;
+}
+
+.arrival-time-info {
+    gap: 2rem;
+}
+
+.extra-stay-detail-upper div p,
+.special-request p,
+.arrival-time-info div p {
+    padding: 8px;
+    font-size: 0.9rem;
+    font-weight: 400;
+}
+
+.special-request h3,
+.arrival-time-info h3 {
+    margin-bottom: 15px;
+}
+
+.arrival-time-info p input {
+    height: 2rem;
+    width: 15.25rem;
+    padding: 2px 8px;
+    border: 1px solid #A6A6A6;
+    border-radius: 2px;
+}
+
+.bank-card-details {
+    padding: 1rem;
+    gap: 1rem;
+    background-color: #FFFFFF;
+}
+
+.bank-card-details h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+.card-details-booking {
+    gap: 2rem;
+}
+
+.card-detail-inputs div p {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.card-detail-inputs {
+    width: 100%;
+    gap: 1rem;
+    justify-content: space-between;
+}
+
+.card-detail-inputs input[type="text"] {
+    padding: 2px 8px 2px 8px;
+    border-radius: 2px;
+    border: 1px solid #A6A6A6;
+    height: 3rem;
+    width: 100%;
+}
+
+.card-detail-inputs div:nth-child(1) {
+    width: 10.938rem;
+}
+
+.card-detail-inputs div:nth-child(2) {
+    width: 13rem;
+}
+
+.card-detail-inputs div:nth-child(2) input {
+    background: url(./assets/icons/bank-card.svg) no-repeat 7px 7px;
+    padding-left: 30px;
+}
+
+.card-detail-inputs div:nth-child(3) {
+    width: 5rem;
+}
+
+.card-detail-inputs div:nth-child(4) {
+    width: 5rem;
+}
+
+.card-details-button {
+    margin-top: 1.5rem;
+    justify-content: space-between;
+}
+
+.card-details-button button {
+    width: 17.313rem;
+    height: 3rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border: 1px solid #07689F;
+    border-radius: 4px;
+}
+
+.card-details-button button:nth-child(1) {
+    color: #07689F;
+    background-color: #FFFFFF;
+}
+
+.card-details-button button:nth-child(2) {
+    color: #FFFFFF;
+    background-color: #07689F;
+}

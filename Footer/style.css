@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.container1 {
+    width: 100%;
+    background-color: #F8F8F8;
+    padding-bottom: 3%;
+}
+
+.footer-links {
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.footer-desc {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9.5rem;
+}
+
+.footer-desc-images {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-desc-images img {
+    margin: 5% 0;
+}
+
+
+.footer-desc-info P:nth-child(1) {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #07689F;
+}
+
+.footer-desc-info P:nth-child(2),
+.footer-desc-info p:nth-child(3) {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.313rem;
+}
+
+.footer-desc-info p:nth-child(4) {
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1.313rem;
+    color: #565656;
+}
+
+
+
+.footer-final {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 3rem;
+}
+
+.footer-final h3 {
+    font-size: 1rem;
+    font-weight: 700;
+}
+
+.anchor-elements a {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 400;
+    color: black;
+    opacity: 70%;
+    margin: 12% 0;
+}
+
+.footer-social-links {
+    display: flex;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+.flex-items {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+
+.feedback {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.feedback h4 {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: #000000;
+}
+
+
+.feedback input {
+    width: 19.5rem;
+    color: #A6A6A6;
+    padding: 8px 8px;
+    border: 0.5px solid #A6A6A6;
+    border-radius: 4px 0px 0px 4px;
+    font-size: 0.875rem;
+    text-indent: 10%;
+}
+
+.feedback button {
+    font-weight: 500;
+    font-size: 0.875rem;
+    width: 5.875rem;
+    padding: 8px 16px 8px 16px;
+    border-radius: 0px 4px 4px 0px;
+    background-color: #07689F;
+    color: white;
+}
+
+
+.emailIcon {
+    background-image: url(./asstes/footer-icons/mail.svg);
+    background-repeat: no-repeat;
+    background-position: 2px 3px;
+}
+
+.container2 {
+    width: 100%;
+    background-color: #D9D9D9;
+}
+
+.footer-base {
+    max-width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 4rem;
+}
+
+.footer-base div {
+    display: flex;
+    font-weight: 500;
+    color: #565656;
+    font-size: 0.75rem;
+}
+
+.footer-base div:nth-child(3) {
+    font-size: 1rem;
+    font-weight: 700;
+}

@@ -1,0 +1,251 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+nav {
+    background-color: #F9F9F9;
+    width: 100%;
+}
+
+.container {
+    max-width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    height: 24.56rem;
+}
+
+.nav-container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-bottom: 40px;
+    height: 9.125rem;
+}
+
+.navMenu {
+    display: flex;
+    width: 100%;
+    padding: 15px 0px;
+    flex-wrap: wrap;
+}
+
+/* logo section  */
+.logo {
+    width: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-top: 10px;
+    color: #07689F;
+}
+
+.searchInput {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 55%;
+}
+
+.searchInput form {
+    width: 100%;
+    margin-left: 10%;
+    position: relative;
+}
+
+.searchInput form input {
+    width: 85%;
+    padding: 8px 16px 8px 16px;
+    border-radius: 4px;
+    border: 0.8px solid rgb(165, 165, 165);
+}
+
+.icon {
+    position: absolute;
+    top: 26%;
+    right: 12%;
+}
+
+
+/* profile section  */
+.nav-elements {
+    width: 35%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icons a img:hover {
+    background-color: #5b5b5b;
+    transition: ease-in 1s all;
+}
+
+.userProfile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.profile-name {
+    display: flex;
+    flex-direction: column;
+}
+
+.profile-name p:nth-child(1) {
+    font-size: 0.875rem;
+    font-weight: 800;
+    color: #043E5F;
+    margin: 0px;
+}
+
+.profile-name p:nth-child(2) {
+    font-size: 0.75rem;
+    font-weight: 400;
+    color: #07689F;
+    margin: 0px;
+}
+
+/* chip Menu  */
+
+.chipMenu {
+    width: 60%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.chipMenu button {
+    background-color: #FFFFFF;
+    color: #A6A6A6;
+    width: fit-content;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 1.875rem;
+    padding: 0.5rem 2rem;
+    border: 1px solid rgb(165, 165, 165);
+    text-align: center;
+}
+
+.chipMenu button:nth-child(3) {
+    background-color: #07689F;
+    color: white;
+}
+
+.chipMenu button:hover {
+    cursor: pointer;
+}
+
+/* search container  */
+
+.searchContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 11.43rem;
+}
+
+.searchMainTitle h2 {
+    height: 2.2rem;
+    font-weight: 700;
+    color: #07689F;
+    margin: 0;
+}
+
+.searchMainTitle p {
+    height: 2.2rem;
+    font-size: 0.875rem;
+    line-height: 1.31rem;
+    margin: 0;
+    font-weight: 400;
+    color: #07689F;
+}
+
+.searchMenuBar {
+    margin: 20px 0;
+}
+
+.searchMenuBar form {
+    display: flex;
+    width: 100%;
+}
+
+.searchMenuBar label {
+    font-weight: 700;
+    font-size: 0.875rem;
+    margin-bottom: 4px;
+}
+
+.searchMenuBar form div {
+    flex: 1;
+}
+
+.searchMenuBar form div:nth-child(3) {
+    flex: 2;
+}
+
+.searchMenuBar form div:nth-child(4) {
+    flex: 1.5;
+}
+
+.inputValueTag {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.inputValueTag input,
+select {
+    padding: 1rem 1rem;
+    width: 100%;
+    border: 2px solid #D9D9D9;
+    font-size: 0.875rem;
+    font-weight: 400;
+    text-indent: 10%;
+}
+
+.imageIcon {
+    background-repeat: no-repeat;
+    background-position: 4px 10px;
+}
+
+.placeIcon {
+    background-image: url(./assets/searchMenuOptions/place.svg);
+}
+
+.headCountIcon {
+    background-image: url(./assets/searchMenuOptions/people.svg);
+}
+
+.calendarIcon {
+    background-image: url(./assets/searchMenuOptions/calendar.svg);
+}
+
+.searchButton {
+    width: 100%;
+    height: 67%;
+    margin-top: 13%;
+    font-size: 1rem;
+    font-weight: 700;
+    background-color: #07689F;
+    color: white;
+    border: 2px solid #07689F;
+    border-radius: 0px 4px 4px 0px;
+}
