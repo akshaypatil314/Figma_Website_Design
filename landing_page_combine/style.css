@@ -751,6 +751,7 @@ select {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+    flex-wrap: wrap;
 }
 
 .footer-final h3 {
@@ -853,8 +854,6 @@ select {
 
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
-
-
     .chipMenu {
         width: 100%;
         gap: 0.6rem;
@@ -880,13 +879,8 @@ select {
     }
 
 
-    #hero {
-        position: relative;
-    }
-
     .banner-text {
         width: fit-content;
-        position: absolute;
         top: 0;
         left: 30%;
     }
@@ -896,7 +890,6 @@ select {
     }
 
     #hero>h1 {
-        position: absolute;
         top: 60%;
         left: 10%;
         font-size: 2rem;
@@ -904,7 +897,6 @@ select {
     }
 
     .tab-section {
-        position: absolute;
         left: 0;
         width: fit-content;
     }
@@ -927,27 +919,27 @@ select {
 
     .cards:nth-child(1) {
         top: 4%;
-        left: 10%;
+        left: 17%;
     }
 
     .cards:nth-child(2) {
         top: 22%;
-        left: 10%;
+        left: 17%;
     }
 
     .cards:nth-child(3) {
         top: 40%;
-        left: 10%;
+        left: 17%;
     }
 
     .cards:nth-child(4) {
         top: 58%;
-        left: 10%;
+        left: 17%;
     }
 
     .cards:nth-child(5) {
         top: 76%;
-        left: 10%;
+        left: 17%;
     }
 
     .offer-section {
@@ -1001,6 +993,7 @@ select {
     .imageCo1,
     .imageCo2 {
         width: 100%;
+        height: 20rem;
         margin-left: 10%;
     }
 
@@ -1034,7 +1027,7 @@ select {
         margin: 0;
         height: fit-content;
         width: fit-content;
-        margin-left: 10%;
+        margin-left: 15%;
     }
 
     .card-image-div {
@@ -1043,6 +1036,7 @@ select {
 
     .card-image {
         width: 300px;
+        height: 15rem;
         border-radius: 2px;
     }
 
@@ -1062,14 +1056,6 @@ select {
     .footer-desc {
         flex-direction: column;
         height: 100%;
-    }
-
-    .footer-final {
-        flex-direction: column;
-    }
-
-    .footer-final div {
-        margin-top: 2%;
     }
 
     .anchor-elements a {
@@ -1119,14 +1105,8 @@ select {
         margin-top: 1%;
     }
 
-
-    #hero {
-        position: relative;
-    }
-
     .banner-text {
         width: fit-content;
-        position: absolute;
         top: 0;
         left: 30%;
     }
@@ -1136,34 +1116,30 @@ select {
     }
 
     #hero>h1 {
-        position: absolute;
         top: 60%;
-        left: 10%;
-        font-size: 2rem;
+        left: 15%;
+        font-size: 3rem;
         object-fit: contain;
     }
 
     .tab-section {
-        position: absolute;
         left: 0;
         width: fit-content;
     }
 
     .tabs {
-        margin-left: 10%;
         width: fit-content;
     }
 
     .tabs h5 {
         width: fit-content;
-        font-size: 0.6rem;
+        font-size: 0.8rem;
         padding: 5px;
     }
 
     .country-cards {
         height: 50rem;
         max-width: 100%;
-        position: relative;
     }
 
     .cards:nth-child(1) {
@@ -1215,10 +1191,6 @@ select {
     .image-2 {
         width: 22rem;
         height: 17.5rem;
-    }
-
-    .image-container {
-        position: relative;
     }
 
     .image-container a {
@@ -1305,13 +1277,6 @@ select {
         height: 100%;
     }
 
-    .footer-final {
-        flex-direction: column;
-    }
-
-    .footer-final div {
-        margin-top: 2%;
-    }
 
     .anchor-elements a {
         margin: 0;
@@ -1362,15 +1327,9 @@ select {
     }
 
 
-    #hero {
-        position: relative;
-    }
-
     .banner-text {
-        width: fit-content;
-        position: absolute;
-        top: 0;
-        left: 30%;
+        top: 10%;
+        left: 33%;
     }
 
     .banner-text h1 {
@@ -1378,59 +1337,55 @@ select {
     }
 
     #hero>h1 {
-        position: absolute;
         top: 60%;
-        left: 10%;
-        font-size: 2.5rem;
+        left: 15%;
+        font-size: 3rem;
         object-fit: contain;
     }
 
     .tab-section {
-        position: absolute;
-        left: 0;
-        width: fit-content;
-    }
-
-    .tabs {
-        margin-left: 10%;
-        width: fit-content;
+        left: 10%;
     }
 
     .tabs h5 {
         width: fit-content;
-        font-size: 0.6rem;
-        padding: 5px;
+        font-size: 0.8rem;
     }
+
 
     .country-cards {
         height: 30rem;
         max-width: 100%;
-        position: relative;
+    }
+
+    .cards {
+        gap: 0;
+        width: fit-content;
     }
 
     .cards:nth-child(1) {
         top: 4%;
-        left: 10%;
+        left: 15%;
     }
 
     .cards:nth-child(2) {
         top: 4%;
-        left: 50%;
+        left: 55%;
     }
 
     .cards:nth-child(3) {
         top: 40%;
-        left: 10%;
+        left: 15%;
     }
 
     .cards:nth-child(4) {
         top: 40%;
-        left: 50%;
+        left: 55%;
     }
 
     .cards:nth-child(5) {
         top: 70%;
-        left: 25%;
+        left: 33%;
     }
 
     .offer-section {
@@ -1460,10 +1415,6 @@ select {
         height: 17.5rem;
     }
 
-    .image-container {
-        position: relative;
-    }
-
     .image-container a {
         top: 12rem;
         left: 2rem;
@@ -1471,15 +1422,12 @@ select {
 
     .comparison-section {
         height: 100%;
-        margin: 0;
     }
 
     .imageCo1,
     .imageCo2 {
-        width: 40rem !important;
-        margin-left: 10%;
+        width: 100%;
     }
-
 
     .imageCo1 p,
     .imageCo2 p {
@@ -1490,8 +1438,13 @@ select {
         left: 0;
     }
 
+    .review-card-info {
+        padding: 50px 0px 20px 10px;
+        height: fit-content;
+    }
+
     .review-container {
-        left: 5%;
+        left: 8%;
         width: auto;
         gap: 10px;
         top: 25%;
@@ -1519,5 +1472,112 @@ select {
         max-width: 100%;
         margin: 0;
         gap: 1%;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .chipMenu {
+        width: 100%;
+        gap: 0.6rem;
+    }
+
+    .banner-text {
+        width: fit-content;
+        top: 10%;
+        left: 40%;
+    }
+
+    #hero>h1 {
+        top: 60%;
+        left: 20%;
+        font-size: 4rem;
+    }
+
+    .tab-section {
+        left: 10%;
+    }
+
+    .tabs h5 {
+        width: fit-content;
+        font-size: 0.8rem;
+    }
+
+    .country-cards {
+        height: 30rem;
+        max-width: 80%;
+    }
+
+    .cards:nth-child(1) {
+        top: 4%;
+        left: 10%;
+    }
+
+    .cards:nth-child(2) {
+        top: 4%;
+        left: 50%;
+    }
+
+    .cards:nth-child(3) {
+        top: 40%;
+        left: 10%;
+    }
+
+    .cards:nth-child(4) {
+        top: 40%;
+        left: 50%;
+    }
+
+    .cards:nth-child(5) {
+        top: 70%;
+        left: 25%;
+    }
+
+    .imageCo1,
+    .imageCo2 {
+        width: 100%;
+    }
+
+    .imageCo1 p,
+    .imageCo2 p {
+        font-size: 1rem;
+        width: 100% !important;
+        top: 65%;
+        padding: 20px;
+        left: 0;
+    }
+
+    .imgCard1,
+    .imgCard2,
+    .imgCard3,
+    .imgCard4 {
+        width: 100%;
+    }
+
+
+    .image-grid {
+        width: 100%;
+        text-align: center;
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .image-1 {
+        width: 15rem;
+        height: 15rem;
+    }
+
+    .image-2 {
+        width: 17rem;
+        height: 17.5rem;
+    }
+
+    .review-container {
+        left: 15%;
+        width: auto;
+        gap: 10px;
+        top: 25%;
+    }
+
+    .footer-social-links {
+        gap: 3%;
     }
 }
