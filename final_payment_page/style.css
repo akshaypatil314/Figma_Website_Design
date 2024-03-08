@@ -23,7 +23,6 @@ body {
 /* ------------------------------------------------------ */
 
 nav {
-    height: 8.125rem;
     background-color: #F9F9F9;
     border-bottom: 1px solid #D9D9D9;
 }
@@ -74,7 +73,6 @@ nav {
 main {
     max-width: 80%;
     margin: 2rem auto;
-    height: 46.063rem;
     gap: 1.6rem;
     display: flex;
     justify-content: space-between;
@@ -91,7 +89,6 @@ main {
     background-color: #07689F;
     color: white;
     border-radius: 8px 8px 0px 0px;
-    position: relative;
     justify-content: space-around;
     align-items: center;
 }
@@ -228,12 +225,16 @@ input[type="tel"] {
 
 /* ---------------------------------------------------  */
 
-
+.container1 {
+    max-width: 80%;
+    margin: 0 auto;
+}
 
 .footer-final {
     display: flex;
     justify-content: space-between;
     margin-top: 3rem;
+    margin: 0 auto;
 }
 
 .footer-final h3 {
@@ -319,7 +320,9 @@ input[type="tel"] {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 4rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem;
 }
 
 .footer-base div {
@@ -332,4 +335,249 @@ input[type="tel"] {
 .footer-base div:nth-child(3) {
     font-size: 1rem;
     font-weight: 700;
+}
+
+/* -------------------------------------------------------------------------------------   */
+
+
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+
+    .container {
+        max-width: 100%;
+    }
+
+    .logo {
+        padding: 2rem 1rem;
+    }
+
+    main {
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .left-final-payment {
+        width: 100%;
+    }
+
+    .first-div {
+        flex-direction: column;
+    }
+
+    .second-div {
+        flex-direction: column;
+    }
+
+    .flight-timing>h4 {
+        padding: 1rem;
+    }
+
+    .flight-ticket {
+        width: 100%;
+    }
+
+    .card-final-details input[type="text"],
+    input[type="tel"] {
+        width: 100%;
+    }
+
+    .card-details-button {
+        flex-direction: column;
+    }
+
+    .right-final-payment {
+        width: 100%;
+    }
+
+    .footer-final {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer-social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-base {
+        max-width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 481px) and (max-width: 600px) {
+
+    .container,
+    .left-final-payment,
+    .flight-ticket {
+        max-width: 100%;
+    }
+
+    .logo {
+        padding: 2rem 1rem;
+    }
+
+    main {
+        margin: 0 auto;
+        flex-direction: column;
+    }
+
+    .first-div,
+    .second-div {
+        flex-direction: column;
+    }
+
+    .flight-timing>h4 {
+        padding: 1rem;
+    }
+
+    .card-final-details input[type="text"],
+    input[type="tel"] {
+        width: 100%;
+    }
+
+    .card-details-button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-final-payment {
+        gap: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-final {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer-social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-base {
+        max-width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 601px) and (max-width: 1024px) {
+
+    .container,
+    .left-final-payment,
+    .flight-ticket {
+        max-width: 100%;
+    }
+
+    .logo {
+        padding: 2rem 1rem;
+    }
+
+    main {
+        margin: 0 auto;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .first-div,
+    .second-div {
+        flex-direction: column;
+    }
+
+    .flight-timing>h4 {
+        padding: 1rem;
+    }
+
+    .card-final-details input[type="text"],
+    input[type="tel"] {
+        width: 100%;
+    }
+
+    .card-details-button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .right-final-payment {
+        gap: 1rem;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footer-final {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+        width: 80%;
+        margin: auto;
+    }
+
+    .footer-social-links {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .footer-base {
+        max-width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+}
+
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    main {
+        max-width: 100%;
+    }
+
+    .left-final-payment {
+        width: 50%;
+    }
+
+    .right-final-payment {
+        width: 50%;
+        gap: 1rem;
+    }
+
+    .card-final-details input[type="text"],
+    input[type="tel"] {
+        width: 100%;
+    }
+
+    .card-details-button {
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .container1 {
+        max-width: 100%;
+        margin: 5% 5%;
+    }
+
+
+    .footer-social-links {
+        gap: 1rem;
+    }
+
+    .footer-base {
+        max-width: 100%;
+        margin: 0;
+        height: 100%;
+    }
+
+    .footer-final {
+        flex-wrap: wrap;
+        gap: 0.3rem;
+    }
+
+    .flight-ticket {
+        width: 100%;
+    }
+
 }
