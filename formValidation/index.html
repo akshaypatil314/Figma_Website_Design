@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+        <div id="nameError" class="error-message"></div>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email">
+        <div id="emailError" class="error-message"></div>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('myForm');
+
+            form.addEventListener('submit', function (event) {
+                // Prevent the form from submitting for demonstration purposes
+                event.preventDefault();
+
+                // Validate the form fields
+                const isNameValid = validateName();
+                const isEmailValid = validateEmail();
+
+                // Display error messages below respective input fields
+                if (!isNameValid) {
+                    displayErrorMessage('name', 'Name is required');
+                } else {
+                    hideErrorMessage('name');
+                }
+
+                if (!isEmailValid) {
+                    displayErrorMessage('email', 'Invalid email address');
+                } else {
+                    hideErrorMessage('email');
+                }
+
+                // If both name and email are valid, you can proceed with form submission
+                if (isNameValid && isEmailValid) {
+                    // Your form submission logic goes here
+                    console.log('Form submitted successfully!');
+                }
+            });
+
+            // Function to validate the name field
+            function validateName() {
+                const nameInput = document.getElementById('name');
+                const nameValue = nameInput.value.trim();
+                return nameValue !== '';
+            }
+
+            // Function to validate the email field
+            function validateEmail() {
+                const emailInput = document.getElementById('email');
+                const emailValue = emailInput.value.trim();
+                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                return emailValue !== '' && emailRegex.test(emailValue);
+            }
+
+            // Function to display error message below the input field
+            function displayErrorMessage(inputId, message) {
+                const errorElement = document.getElementById(`${inputId}Error`);
+                errorElement.textContent = message;
+            }
+
+            // Function to hide the error message below the input field
+            function hideErrorMessage(inputId) {
+                const errorElement = document.getElementById(`${inputId}Error`);
+                errorElement.textContent = '';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

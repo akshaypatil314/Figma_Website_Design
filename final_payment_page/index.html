@@ -79,69 +79,73 @@
                 </div>
             </div>
 
-            <div class="user-input flex-column">
-                <div class="payment-method-selection flex-row">
-                    <div>
-                        <input type="radio" checked>
-                        <label>Booking For Work</label>
-                    </div>
-                    <div class="flex-row">
-                        <label>Payment Method</label>
-                        <select>
-                            <option>Paypal</option>
-                            <option>Debit Card</option>
-                            <option>UPI ID</option>
-                        </select>
-                    </div>
-                </div>
-                <div class="card-final-details flex-column">
-                    <div class="first-div flex-row">
-                        <div>
-                            <p>First Name *</p>
-                            <input type="text" placeholder="Anna">
-                        </div>
-                        <div>
-                            <p>Last Name *</p>
-                            <input type="text" placeholder="Carinna">
-                        </div>
-                        <div>
-                            <p>Phone Number *</p>
-                            <input type="tel" placeholder="7643788888">
-                        </div>
-                    </div>
-                    <div class="second-div flex-row">
-                        <div>
-                            <p>Card Number *</p>
-                            <input type="text" placeholder="..............">
-                        </div>
-                        <div>
-                            <p>CVC *</p>
-                            <input type="text" placeholder="***">
-                        </div>
-                        <div>
-                            <p>EXP Date *</p>
-                            <input type="text" placeholder="**/**">
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <form id="myForm">
+                <div class="user-input flex-column">
 
-            <div>
-                <h2>Cancellation Policy</h2>
-                <p>Get A Full Refund If You Cancel By Jun 23(PDT). &nbsp; &nbsp; Read more...</p>
-            </div>
+                    <div class="payment-method-selection flex-row">
+                        <div>
+                            <input type="radio">
+                            <label>Booking For Work</label>
+                        </div>
+                        <div class="flex-row">
+                            <label for="paymentMode">Payment Method</label>
+                            <select name="paymentMode" id="paymentMode">
+                                <option>Paypal</option>
+                                <option>Netbanking</option>
+                                <option>Credit Card</option>
+                                <option>Debit Card</option>
+                                <option>UPI ID</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="card-final-details flex-column">
+                        <div class="first-div flex-row">
+                            <div>
+                                <p>First Name</p>
+                                <input type="text" name="firstName" id="firstName" placeholder="Anna">
+                            </div>
+                            <div>
+                                <p>Last Name</p>
+                                <input type="text" name="lastName" id="lastName" placeholder="Carinna">
+                            </div>
+                            <div>
+                                <p>Phone Number</p>
+                                <input type="tel" name="phone" id="phone" placeholder="7643788888">
+                            </div>
+                        </div>
+                        <div class="second-div flex-row">
+                            <div>
+                                <p>Card Number</p>
+                                <input type="text" name="cardNo" id="cardNo" placeholder="..............">
+                            </div>
+                            <div>
+                                <p>CVC</p>
+                                <input type="text" name="cvc" id="cvc" placeholder="***">
+                            </div>
+                            <div>
+                                <p>EXP Date *</p>
+                                <input type="date" name="expDate" id="expDate" placeholder="**/**">
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
-            <div class="card-details-button flex-row">
-                <div class="card-details-button1 flex-column">
-                    <button>Confirm And Pay</button>
-                    <p>Check your information before submitting.</p>
+                <div>
+                    <h2>Cancellation Policy</h2>
+                    <p>Get A Full Refund If You Cancel By Jun 23(PDT). &nbsp; &nbsp; Read more...</p>
                 </div>
-                <div class="card-details-button2 flex-column">
-                    <button>Save If You Like It<img src="./assets/like.svg"></button>
-                    <p>Save your flight info , find it through Shortcut.</p>
+
+                <div class="card-details-button flex-row">
+                    <div class="card-details-button1 flex-column">
+                        <button onclick="validateForm(event)">Confirm And Pay</button>
+                        <p>Check your information before submitting.</p>
+                    </div>
+                    <div class="card-details-button2 flex-column">
+                        <button type="button">Save If You Like It<img src="./assets/like.svg"></button>
+                        <p>Save your flight info , find it through Shortcut.</p>
+                    </div>
                 </div>
-            </div>
-            </div>
+            </form>
     </main>
 
     <footer>
@@ -254,6 +258,14 @@
 
     </footer>
 
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopupBtn">&times;</span>
+            <p id="errorMessages"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

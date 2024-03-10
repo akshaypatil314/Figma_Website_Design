@@ -56,11 +56,9 @@
                 </div>
             </div>
         </div>
-
     </nav>
 
     <main>
-
         <div class="left-payment-section flex-column">
             <div class="hotel-booking-details flex-column">
                 <div class="top flex-row">
@@ -191,7 +189,7 @@
                     <div class="pay-later flex-column">
                         <div class="pay-later-radio flex-row">
                             <h1>Pay Part Now, Part Later</h1>
-                            <input type="radio" checked>
+                            <input type="radio">
                         </div>
                         <p>Pay $ 200 now, and the rest ($6,60) will be automatically charged to the same payment
                             method
@@ -207,163 +205,174 @@
                     <div>
                         <label>Payment Method</label>
                         <select>
-                            <option selected><img src="./assets/icons/paypal.svg" alt="paypal"></option>
+                            <option selected>Paypal</option>
+                            <option>Netbanking</option>
+                            <option>UPI</option>
+                            <option>Debit Card</option>
+                            <option>Credit Card</option>
                         </select>
                     </div>
                     <div class="flex-row">
                         <label>Booking For Work</label>
-                        <input type="radio" checked>
+                        <input type="radio">
                     </div>
                 </div>
             </div>
         </div>
 
-        </div>
         <div class="right-payment-section flex-column">
-            <div class="user-booking-details flex-column">
-                <div class="upper">
-                    <div class="user-booking-profile flex-row">
-                        <div class="user-login-detail flex-row">
-                            <img src="./assets/icons/profile.jpg">
-                            <div class="profile-name">
-                                <p>Anna Carinna</p>
-                                <p>easyset24@gmail.com</p>
-                            </div>
-                        </div>
-                        <div>
-                            <button>Check Your Booking History</button>
-                        </div>
-                    </div>
-
-                    <div class="input-selection flex-row">
-                        <h3>Who are you booking for?</h3>
-                        <p><input type="radio" name="radio"> I Am The Main Guest</p>
-                        <p><input type="radio" name="radio" checked> Booking is for someone else</p>
-                    </div>
-                    <div class="edit-profile flex-column">
-                        <h2>Enter Your Information</h2>
-                        <p>Make Sure the Information that you Have already written in yoy Profile is Correct.</p>
-                        <a href="#"><img src="./assets/icons/edit.svg"> Edit Profile</a>
-                    </div>
-                </div>
-
-                <div class="middle flex-column">
-                    <div class="form-data flex-column">
-                        <div class="flex-column">
-                            <h4>Full Name</h4>
-                            <div class="form-name-input flex-row">
-                                <input type="text" placeholder="First name*">
-                                <input type="text" placeholder="Middle name">
-                                <input type="text" placeholder="Last name*">
-                            </div>
-                        </div>
-                        <div class="form-email-phone-input flex-row">
-                            <div class="email-input-form">
-                                <p>Email Address</p>
-                                <input type="email" placeholder="...........">
-                            </div>
-                            <div class="phone-input-form">
-                                <p>Phone Number</p>
-                                <input type="text" placeholder="7643788888">
-                            </div>
-                        </div>
-                        <div>
-                            <h4>If You Need Assistance</h4>
-                            <p>Choose An Option Based On Physical Disability Accordingly.</p>
-                        </div>
-                        <div class="flex-row">
-                            <div>
-                                <p>Choose An Option</p>
-                                <select name="Disability">
-                                    <option value="No" selected>Not Provided</option>
-                                    <option value="Yes">Yes</option>
-                                    <option value="No">No</option>
-                                </select>
+            <form id="myForm">
+                <div class="user-booking-details flex-column">
+                    <div class="upper">
+                        <div class="user-booking-profile flex-row">
+                            <div class="user-login-detail flex-row">
+                                <img src="./assets/icons/profile.jpg">
+                                <div class="profile-name">
+                                    <p>Anna Carinna</p>
+                                    <p>easyset24@gmail.com</p>
+                                </div>
                             </div>
                             <div>
-                                <p>Region /Country</p>
-                                <input type="text" placeholder="Country*">
+                                <button type="button">Check Your Booking History</button>
+                            </div>
+                        </div>
+
+                        <div class="input-selection flex-row">
+                            <h3>Who are you booking for?</h3>
+                            <p><input type="radio" name="guestInfo"> I Am The Main Guest</p>
+                            <p><input type="radio" name="guestInfo"> Booking is for someone else</p>
+                        </div>
+                        <div class="edit-profile flex-column">
+                            <h2>Enter Your Information</h2>
+                            <p>Make Sure the Information that you Have already written in yoy Profile is Correct.</p>
+                            <a href="#"><img src="./assets/icons/edit.svg"> Edit Profile</a>
+                        </div>
+                    </div>
+
+                    <div class="middle flex-column">
+                        <div class="form-data flex-column">
+                            <div class="flex-column">
+                                <h4>Full Name</h4>
+                                <div class="form-name-input flex-row">
+                                    <input type="text" name="firstName" id="firstName" placeholder="First name">
+                                    <input type="text" name="middleName" id="middleName" placeholder="Middle name">
+                                    <input type="text" name="lastName" id="lastName" placeholder="Last name">
+                                </div>
+                            </div>
+                            <div class="form-email-phone-input flex-row">
+                                <div class="email-input-form">
+                                    <p>Email Address</p>
+                                    <input type="email" name="email" id="email" placeholder="...........">
+                                </div>
+                                <div class="phone-input-form">
+                                    <p>Phone Number</p>
+                                    <input type="number" name="phone" id="phone" placeholder="7643788888">
+                                </div>
+                            </div>
+                            <div>
+                                <h4>If You Need Assistance</h4>
+                                <p>Choose An Option Based On Physical Disability Accordingly.</p>
+                            </div>
+                            <div class="flex-row">
+                                <div>
+                                    <p>Choose An Option</p>
+                                    <select name="Disability" id="Disability">
+                                        <option value="No" selected>Not Provided</option>
+                                        <option value="Yes">Yes</option>
+                                        <option value="No">No</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <p>Region /Country</p>
+                                    <input type="text" name="country" id="country" placeholder="Country">
+                                </div>
                             </div>
                         </div>
                     </div>
 
-                </div>
-
-                <div class="lower flex-column">
-                    <div class="extra-stay-detail flex-column">
-                        <div class="extra-stay-detail-upper flex-column">
-                            <h2>Add To Your Stay</h2>
+                    <div class="lower flex-column">
+                        <div class="extra-stay-detail flex-column">
+                            <div class="extra-stay-detail-upper flex-column">
+                                <h2>Add To Your Stay</h2>
+                                <div>
+                                    <strong> <input type="checkbox" name="flightInfo" id="flightInfo">I Will Need A
+                                        Flight For My
+                                        Trip</strong>
+                                    <p><img src="./assets/icons/flight-airflow.svg"> 20% Special Offer If You Book A
+                                        Flight
+                                    </p>
+                                    <p>Flexible Flight Options From Stockholm To Turkiye From SLK 766/Round Trip. Finish
+                                        Booking</p>
+                                    <p>This Stay To Get Flight Recommendations That Match Your Selected Dates.</p>
+                                </div>
+                                <div>
+                                    <strong> <input type="checkbox" name="rideInfo" id="rideInfo"> Want To Book A Taxi
+                                        Or Shuttle Ride In
+                                        Advance?</strong>
+                                    <p><img src="./assets/icons/taxi.svg"> 10% Special Offer If You Rent A Taxi
+                                    </p>
+                                    <p>Avoid Surprises_ Get From The Airport To Your Accommodation Without A Hitch.</p>
+                                    <p>We Will Add Taxi Options To Your Booking Confirmation..</p>
+                                </div>
+                            </div>
+                            <div class="special-request flex-column">
+                                <h3>Special Requests</h3>
+                                <p>Special requests can not be guaranteed _ but the property will do its best to meet
+                                    your
+                                    needs.</p>
+                                <p>You can always make a special request after your booking is complete!</p>
+                                <p>(oprional)</p>
+                                <textarea rows="7" name="specialRequest" id="specialRequest"></textarea>
+                                <p><input type="checkbox" name="roomInfo" id="roomInfo">I Would Like Rooms Close To Each
+                                    Other</p>
+                            </div>
+                        </div>
+                        <div class="arrival-time-info flex-column">
                             <div>
-                                <strong> <input type="checkbox">I Will Need A Flight For My
-                                    Trip</strong>
-                                <p><img src="./assets/icons/flight-airflow.svg"> 20% Special Offer If You Book A Flight
+                                <h3>Your Arrival Time</h3>
+                                <p><img src="./assets/icons/check-one.svg"> Rooms Will Be Ready For Check_In Between
+                                    15:00
+                                    and 23:00</p>
+                                <p><img src="./assets/icons/history.svg"> 24-Huor Front Desk_Help Wherever You Need It!
                                 </p>
-                                <p>Flexible Flight Options From Stockholm To Turkiye From SLK 766/Round Trip. Finish
-                                    Booking</p>
-                                <p>This Stay To Get Flight Recommendations That Match Your Selected Dates.</p>
                             </div>
                             <div>
-                                <strong> <input type="checkbox"> Want To Book A Taxi Or Shuttle Ride In
-                                    Advance?</strong>
-                                <p><img src="./assets/icons/taxi.svg"> 10% Special Offer If You Rent A Taxi
-                                </p>
-                                <p>Avoid Surprises_ Get From The Airport To Your Accommodation Without A Hitch.</p>
-                                <p>We Will Add Taxi Options To Your Booking Confirmation..</p>
+                                <p><strong>Add Your Estimated Arrival Time</strong>(optional)</p>
+                                <p><input type="time" name="time" id="time" placeholder="Please Select"></p>
+                                <p>Time for <strong>CET</strong> Time Zone</p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="bank-card-details flex-column">
+                    <div class="card-details-booking flex-column">
+                        <h3>Bank Card Information</h3>
+                        <div class="card-detail-inputs flex-row">
+                            <div>
+                                <p>Full Name On The Card</p>
+                                <input type="text" name="fullName" id="fullName" placeholder="Anna Carina">
+                            </div>
+                            <div>
+                                <p>Card Number</p>
+                                <input type="text" name="cardNo" id="cardNo" placeholder="..............">
+                            </div>
+                            <div>
+                                <p>EXP Date</p>
+                                <input type="date" name="expDate" id="expDate" placeholder="**/**">
+                            </div>
+                            <div>
+                                <p>CVC</p>
+                                <input type="text" name="cvc" id="cvc" placeholder="***">
                             </div>
                         </div>
-                        <div class="special-request flex-column">
-                            <h3>Special Requests</h3>
-                            <p>Special requests can not be guaranteed _ but the property will do its best to meet your
-                                needs.</p>
-                            <p>You can always make a special request after your booking is complete!</p>
-                            <p>(oprional)</p>
-                            <textarea rows="7" cols=""></textarea>
-                            <p><input type="checkbox">I Would Like Rooms Close To Each Other</p>
-                        </div>
                     </div>
-                    <div class="arrival-time-info flex-column">
-                        <div>
-                            <h3>Your Arrival Time</h3>
-                            <p><img src="./assets/icons/check-one.svg"> Rooms Will Be Ready For Check_In Between 15:00
-                                and 23:00</p>
-                            <p><img src="./assets/icons/history.svg"> 24-Huor Front Desk_Help Wherever You Need It!</p>
-                        </div>
-                        <div>
-                            <p><strong>Add Your Estimated Arrival Time</strong>(optional)</p>
-                            <p><input type="time" placeholder="Please Select"></p>
-                            <p>Time for <strong>CET</strong> Time Zone</p>
-                        </div>
-
+                    <div class="card-details-button flex-row">
+                        <button type="button">Save In Shortcut <img src="./assets/icons/like.svg"></button>
+                        <button id="submitBtn" onclick="validateForm(event)">Payment</button>
                     </div>
                 </div>
-            </div>
-            <div class="bank-card-details flex-column">
-                <div class="card-details-booking flex-column">
-                    <h3>Bank Card Information</h3>
-                    <div class="card-detail-inputs flex-row">
-                        <div>
-                            <p>Full Name On The Card</p>
-                            <input type="text" placeholder="Anna Carina">
-                        </div>
-                        <div>
-                            <p>Card Number</p>
-                            <input type="text" placeholder="..............">
-                        </div>
-                        <div>
-                            <p>EXP Date</p>
-                            <input type="text" placeholder="**/**">
-                        </div>
-                        <div>
-                            <p>CVC</p>
-                            <input type="text" placeholder="***">
-                        </div>
-                    </div>
-                </div>
-                <div class="card-details-button flex-row">
-                    <button>Save In Shortcut <img src="./assets/icons/like.svg"></button>
-                    <button>Payment</button>
-                </div>
-            </div>
+            </form>
         </div>
     </main>
 
@@ -461,7 +470,6 @@
                         </form>
                     </div>
                 </div>
-
             </div>
         </div>
 
@@ -488,8 +496,17 @@
                 </div>
             </div>
         </div>
-
     </footer>
+
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopupBtn">&times;</span>
+            <p id="errorMessages"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation with Popup</title>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 14px;
+            margin-top: 5px;
+        }
+
+        .error-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+
+        .error-popup ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+
+    <form id="myForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" pattern="[A-Za-z ]+" title="Only letters and spaces are allowed">
+        <!-- <div id="nameError" class="error-message"></div> -->
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]+"
+            title="Enter a valid email address">
+        <!-- <div id="emailError" class="error-message"></div> -->
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <div id="errorPopup" class="error-popup">
+        <h2>Error:</h2>
+        <ul id="errorList"></ul>
+        <button onclick="closePopup()">Close</button>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const form = document.getElementById('myForm');
+            const errorPopup = document.getElementById('errorPopup');
+            const errorList = document.getElementById('errorList');
+
+            form.addEventListener('submit', function (event) {
+                // Prevent the form from submitting for demonstration purposes
+                event.preventDefault();
+
+                // Validate the form fields using the built-in HTML5 validation
+                if (form.checkValidity()) {
+                    // If the form is valid, you can proceed with form submission
+                    console.log('Form submitted successfully!');
+                } else {
+                    // If the form is invalid, display custom error messages
+                    validateName();
+                    validateEmail();
+                    displayErrorPopup();
+                }
+            });
+
+            // Function to validate the name field
+            function validateName() {
+                const nameInput = document.getElementById('name');
+                const nameError = document.getElementById('nameError');
+
+                if (nameInput.validity.patternMismatch) {
+                    nameError.textContent = 'Only letters and spaces are allowed';
+                    highlightInput(nameInput);
+                } else {
+                    nameError.textContent = '';
+                    removeHighlight(nameInput);
+                }
+            }
+
+            // Function to validate the email field
+            function validateEmail() {
+                const emailInput = document.getElementById('email');
+                const emailError = document.getElementById('emailError');
+
+                if (emailInput.validity.patternMismatch) {
+                    emailError.textContent = 'Enter a valid email address';
+                    highlightInput(emailInput);
+                } else {
+                    emailError.textContent = '';
+                    removeHighlight(emailInput);
+                }
+            }
+
+            // Function to highlight the input field with an error
+            function highlightInput(inputElement) {
+                inputElement.style.border = '2px solid red';
+            }
+
+            // Function to remove the highlight from the input field
+            function removeHighlight(inputElement) {
+                inputElement.style.border = '';
+            }
+
+            // Function to display the error popup
+            function displayErrorPopup() {
+                errorList.innerHTML = ''; // Clear previous errors
+                const invalidInputs = form.querySelectorAll(':invalid');
+
+                invalidInputs.forEach(function (input) {
+                    const errorMessage = document.createElement('li');
+                    errorMessage.textContent = input.title;
+                    errorList.appendChild(errorMessage);
+                });
+
+                errorPopup.style.display = 'block';
+            }
+
+            // Function to close the error popup
+            function closePopup() {
+                errorPopup.style.display = 'none';
+            }
+        });
+    </script>
+
+</body>
+
+</html>

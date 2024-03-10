@@ -133,7 +133,8 @@ main {
     color: #4C9839;
 }
 
-.user-input {
+.user-input,
+.card-final-details {
     gap: 1.5rem;
 }
 
@@ -155,12 +156,9 @@ main {
     gap: 10px;
 }
 
-.card-final-details {
-    gap: 1.5rem;
-}
-
 .card-final-details input[type="text"],
-input[type="tel"] {
+input[type="tel"],
+input[type="date"] {
     padding: 2px 8px 2px 8px;
     border-radius: 2px;
     border: 1px solid #A6A6A6;
@@ -172,17 +170,14 @@ input[type="tel"] {
     font-weight: 500;
 }
 
-.first-div {
+.first-div,
+.second-div {
     justify-content: space-between;
 }
 
 .first-div div:nth-child(3) input {
     background: url(./assets/SE.png) no-repeat 7px 7px;
     padding-left: 30px;
-}
-
-.second-div {
-    justify-content: space-between;
 }
 
 
@@ -300,6 +295,13 @@ input[type="tel"] {
     border-radius: 0px 4px 4px 0px;
     background-color: #07689F;
     color: white;
+}
+
+.feedback button:hover,
+.card-details-button1:hover,
+.card-details-button2:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 
@@ -545,7 +547,8 @@ input[type="tel"] {
     }
 
     .card-final-details input[type="text"],
-    input[type="tel"] {
+    input[type="tel"],
+    .flight-ticket {
         width: 100%;
     }
 
@@ -554,12 +557,10 @@ input[type="tel"] {
         align-items: center;
     }
 
-
     .container1 {
         max-width: 100%;
         margin: 5% 5%;
     }
-
 
     .footer-social-links {
         gap: 1rem;
@@ -575,9 +576,34 @@ input[type="tel"] {
         flex-wrap: wrap;
         gap: 0.3rem;
     }
+}
 
-    .flight-ticket {
-        width: 100%;
-    }
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
+.popup-content {
+    background-color: #ffffff;
+    color: rgb(230, 58, 58);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
 }

@@ -63,30 +63,32 @@
                     <form>
 
                         <div>
-                            <label>Place</label>
+                            <label for="place">Place</label>
                             <div class="inputValueTag">
-                                <input class="placeIcon imageIcon" type="text" value="Gutenberg">
+                                <input class="placeIcon imageIcon" id="place" name="place" type="text"
+                                    placeholder="Gutenberg">
                             </div>
                         </div>
 
                         <div>
-                            <label>VIP</label>
+                            <label for="vip">VIP</label>
                             <div class="inputValueTag">
-                                <select>
+                                <select name="vip" id="vip">
                                     <option>Long Lasting</option>
                                     <option>Super Delux</option>
-                                    <option>Delux</option>
+                                    <option selected>Delux</option>
                                     <option>Normal</option>
                                 </select>
                             </div>
                         </div>
 
                         <div>
-                            <label>Passengers - Room Condition</label>
+                            <label for="room">Passengers - Room Condition</label>
                             <div class="inputValueTag">
-                                <input class="headCountIcon imageIcon" type="text" value="2 Adults - 3 Children">
-                                <select>
-                                    <option>Two Rooms</option>
+                                <input class="headCountIcon imageIcon" name="headCount" id="headCount" type="text"
+                                    placeholder="2 Adults - 3 Children">
+                                <select name="room" id="room">
+                                    <option selected>Two Rooms</option>
                                     <option>Single Room</option>
                                     <option>Three Rooms</option>
                                 </select>
@@ -94,14 +96,15 @@
                         </div>
 
                         <div>
-                            <label>Check In - Check Out</label>
+                            <label for="date">Check In - Check Out</label>
                             <div class="inputValueTag">
-                                <input class="calendarIcon imageIcon" type="text" value="18 Dec 2023 - 23 Dec 2023">
+                                <input class="calendarIcon imageIcon" type="text"
+                                    placeholder="18 Dec 2023 - 23 Dec 2023" name="date" id="date">
                             </div>
                         </div>
 
                         <div>
-                            <button class="searchButton">Search</button>
+                            <button class="searchButton" onclick="checkInput(event)">Search</button>
                         </div>
                     </form>
                 </div>
@@ -130,6 +133,7 @@
 
     <section class="country-cards">
         <div class="cards">
+            <img class="choice-tag" src="./assets/Tag.svg" alt="tag">
             <img src="./assets/country-cards/belgium.jpg" alt="belgium">
             <div>
                 <h4>Belgium</h4>
@@ -137,6 +141,7 @@
             </div>
         </div>
         <div class="cards">
+            <img class="choice-tag" src="./assets/Tag.svg" alt="tag">
             <img src="./assets/country-cards/amsterdam.jpg" alt="amsterdam">
             <div>
                 <h4>Amsterdam</h4>
@@ -144,6 +149,7 @@
             </div>
         </div>
         <div class="cards">
+            <img class="choice-tag" src="./assets/Tag.svg" alt="tag">
             <img src="./assets/country-cards/Nepal.jpg" alt="Nepal">
             <div>
                 <h4>Nepal</h4>
@@ -151,6 +157,7 @@
             </div>
         </div>
         <div class="cards">
+            <img class="choice-tag" src="./assets/Tag.svg" alt="tag">
             <img src="./assets/country-cards/new-jersy.jpg" alt="new-jersy">
             <div>
                 <h4>New Jersey</h4>
@@ -159,6 +166,7 @@
         </div>
 
         <div class="cards">
+            <img class="choice-tag" src="./assets/Tag.svg" alt="tag">
             <img src="./assets/country-cards/gothenburg.jpg" alt="gothenburg">
             <div>
                 <h4>Gothenburg</h4>
@@ -409,7 +417,15 @@
 
     </footer>
 
-    <script src="https://kit.fontawesome.com/1d2e754d40.js" crossorigin="anonymous"></script>
+
+    <div id="popup" class="popup">
+        <div class="popup-content">
+            <span class="close" id="closePopupBtn">&times;</span>
+            <p id="errorMessages"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 
 </body>
 

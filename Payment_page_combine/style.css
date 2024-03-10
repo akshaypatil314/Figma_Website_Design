@@ -520,8 +520,9 @@ main {
     border-radius: 4px;
 }
 
-.user-booking-profile button :hover {
+.user-booking-profile button:hover {
     cursor: pointer;
+    transform: scale(1.1);
 }
 
 .profile-name p:nth-child(1) {
@@ -688,16 +689,15 @@ select {
 .card-detail-inputs {
     width: 100%;
     gap: 1rem;
-    justify-content: space-between;
     flex-wrap: wrap;
 }
 
-.card-detail-inputs input[type="text"] {
+.card-detail-inputs input[type="text"],
+input[type="date"] {
     padding: 2px 8px 2px 8px;
     border-radius: 2px;
     border: 1px solid #A6A6A6;
     height: 3rem;
-    width: 100%;
 }
 
 .card-detail-inputs div:nth-child(1) {
@@ -713,13 +713,6 @@ select {
     padding-left: 30px;
 }
 
-.card-detail-inputs div:nth-child(3) {
-    width: 5rem;
-}
-
-.card-detail-inputs div:nth-child(4) {
-    width: 5rem;
-}
 
 .card-details-button {
     margin-top: 1.5rem;
@@ -743,6 +736,11 @@ select {
 .card-details-button button:nth-child(2) {
     color: #FFFFFF;
     background-color: #07689F;
+}
+
+.card-details-button button:hover {
+    cursor: pointer;
+    transform: scale(1.1);
 }
 
 /* ----------------------------------------------------------------------------------  */
@@ -921,10 +919,6 @@ select {
         justify-content: space-between;
     }
 
-    .nav-elements {
-        width: 100%;
-    }
-
     .chipMenu {
         gap: 1rem;
         width: 100%;
@@ -946,28 +940,26 @@ select {
         height: 100%;
     }
 
-    .right-payment-section {
-        width: 100%;
-    }
-
     .user-booking-profile {
         gap: 1rem;
     }
 
-    .user-booking-profile button {
+    .nav-elements,
+    .right-payment-section,
+    .user-booking-profile button,
+    .form-data,
+    .form-name-input input,
+    .email-input-form input,
+    .left-payment-section {
         width: 100%;
     }
 
-    .form-data {
-        width: 100%;
-    }
 
-    .form-name-input input {
-        width: 100%;
-    }
-
-    .email-input-form input {
-        width: 100%;
+    .form-name-input,
+    .form-email-phone-input,
+    .user-booking-profile {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .footer-desc {
@@ -988,10 +980,6 @@ select {
     .footer-final {
         flex-wrap: wrap;
         gap: 0.5rem;
-    }
-
-    .left-payment-section {
-        width: 100%;
     }
 }
 
@@ -1006,7 +994,14 @@ select {
         justify-content: space-between;
     }
 
-    .nav-elements {
+    .nav-elements,
+    .right-payment-section,
+    .user-booking-profile button,
+    .form-data,
+    .form-name-input input,
+    .email-input-form input,
+    .phone-input-form input,
+    .left-payment-section {
         width: 100%;
     }
 
@@ -1023,6 +1018,10 @@ select {
         gap: 2rem;
     }
 
+    .fetaure p {
+        height: 100%;
+    }
+
     .top {
         justify-content: space-between;
     }
@@ -1031,20 +1030,8 @@ select {
         justify-content: space-around;
     }
 
-    .fetaure p {
-        height: 100%;
-    }
-
-    .right-payment-section {
-        width: 100%;
-    }
-
     .user-booking-profile {
         gap: 1rem;
-    }
-
-    .user-booking-profile button {
-        width: 100%;
     }
 
     .logo {
@@ -1055,16 +1042,10 @@ select {
         width: 50%;
     }
 
-    .form-data {
-        width: 100%;
-    }
-
-    .form-name-input input {
-        width: 100%;
-    }
-
-    .email-input-form input {
-        width: 100%;
+    .form-name-input,
+    .form-email-phone-input {
+        flex-direction: column;
+        gap: 1rem;
     }
 
     .footer-desc {
@@ -1085,10 +1066,6 @@ select {
     .footer-final {
         flex-wrap: wrap;
         gap: 0.5rem;
-    }
-
-    .left-payment-section {
-        width: 100%;
     }
 }
 
@@ -1111,9 +1088,6 @@ select {
         width: 30%;
     }
 
-    .nav-elements {
-        width: 70%;
-    }
 
     .navMenu {
         justify-content: space-around;
@@ -1179,11 +1153,16 @@ select {
         gap: 2rem !important;
     }
 
-    .form-name-input input {
-        width: 100%;
+    .form-name-input,
+    .form-email-phone-input,
+    .card-detail-inputs {
+        flex-direction: column;
+        gap: 1rem;
     }
 
-    .email-input-form input {
+    .form-name-input input,
+    .email-input-form input,
+    .phone-input-form input {
         width: 100%;
     }
 
@@ -1202,10 +1181,6 @@ select {
 
     .card-details-button button {
         width: 40%;
-    }
-
-    .card-detail-inputs {
-        gap: 0;
     }
 
     .footer-desc {
@@ -1289,4 +1264,34 @@ select {
     .card-details-button button {
         width: 40%;
     }
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+    background-color: #ffffff;
+    color: rgb(230, 58, 58);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 20px;
+    cursor: pointer;
 }
